@@ -2,8 +2,7 @@
 
 A Python-based simulation of optical caustics on a pool bottom, powered by geometric optics and spectral surface synthesis.
 
-![Caustics Demo](https://upload.wikimedia.org/wikipedia/commons/8/87/Caustics_at_the_bottom_of_a_pool.jpg)
-*(Representative image)*
+![Caustics Simulation](Output/caustics_simulation.gif)
 
 ## Project Overview
 
@@ -18,14 +17,14 @@ This project simulates the beautiful "dancing light" patterns (caustics) seen at
 
 ## Features
 
-*   **Realistic Dispersion**: Simulates wave dispersion where phase velocity depends on wavelength (\(\omega^2 = gk \tanh(kH)\)).
+*   **Realistic Dispersion**: Simulates wave dispersion where phase velocity depends on wavelength ($\omega^2 = gk \tanh(kH)$).
 *   **Fresnel Effects**: Approximates surface transmission using Schlick's approximation (rays are weighted by how much light actually enters the water).
 *   **Tonemapping**: Applies logarithmic exposure and gamma correction to handle the high dynamic range of the focused light rays.
 *   **Animation**: Real-time visualization using `matplotlib.animation`.
 
 ## Code Structure
 
-The core logic is contained in the Jupyter Notebook `CausticWaves.ipynb`.
+The core logic is contained in the Jupyter Notebook `CausticWaves.ipynb` and the standalone script `simulation.py`.
 *   `SpectralRipples`: Class handling the FFT generation of the height field.
 *   `refract_air_to_water`: Vectorized implementation of 3D Snell's refraction.
 *   `caustics_frame`: Main rendering pipeline for a single time step.
