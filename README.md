@@ -4,6 +4,8 @@ A Python-based simulation of optical caustics on a pool bottom, powered by geome
 
 ![Caustics Simulation](Output/caustics_simulation.gif)
 
+*Video generated using `CausticWaves original.ipynb`*
+
 ## Project Overview
 
 This project simulates the beautiful "dancing light" patterns (caustics) seen at the bottom of swimming pools. It models the interaction of sunlight with a dynamic water surface to compute the intensity distribution on the pool floor.
@@ -24,16 +26,23 @@ This project simulates the beautiful "dancing light" patterns (caustics) seen at
 
 ## Code Structure
 
-The core logic is contained in the Jupyter Notebook `CausticWaves.ipynb` and the standalone script `simulation.py`.
+The core logic is contained in the Jupyter Notebook `CausticWaves original.ipynb` and the standalone script `simulation.py`.
 *   `SpectralRipples`: Class handling the FFT generation of the height field.
 *   `refract_air_to_water`: Vectorized implementation of 3D Snell's refraction.
 *   `caustics_frame`: Main rendering pipeline for a single time step.
 
 ## Usage
 
-1.  Open `CausticWaves.ipynb` in Jupyter or VS Code.
-2.  Run the cells to initialize the simulation.
-3.  The animation will render showing the evolving caustic patterns.
+**Recommended: Start with the Jupyter Notebook**
+
+1.  Open `CausticWaves original.ipynb` in Jupyter or VS Code.
+2.  Run the cell to generate the simulation.
+3.  The animation will render showing the evolving caustic patterns with blue color grading.
+4.  Video output will be saved to `Output/pool_caustics_clean.mp4`.
+
+**Alternative: Standalone Script**
+
+Run `python simulation.py` for a command-line version with detailed comments and grayscale output.
 
 ## Dependencies
 
